@@ -90,9 +90,9 @@ FROM film;
 SELECT COUNT(DISTINCT rating)
 FROM film;
 --there are 5 rating categories
-SELECT MAX(rating)as c
+SELECT rating, count(rating)as c
 FROM film
-
-
-
+GROUP BY rating
+ORDER BY c DESC;
+-- the ratings with the most movies it pg-13
 
